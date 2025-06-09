@@ -107,4 +107,12 @@
   .footer-top {
     align-items: center;
   }
+
+  .footer-bottom {
+    min-width: 140px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
 }

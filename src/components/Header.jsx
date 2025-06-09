@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logoHeader from '../assets/logo-header.svg';
 import './Header.css'
 import { IconField } from 'primereact/iconfield';
@@ -7,8 +7,28 @@ import { InputText } from 'primereact/inputtext'
 import { NavLink } from 'react-router-dom';
 import { Button } from 'primereact/button';
 import miniCart from '../assets/mini-cart.svg'
+import { useNavigate } from 'react-router-dom';
+import mainHome from '../assets/main-home.png'
 
-const Header = () => {
+const Header = () => {  
+
+    
+    const [isCartOpen, setIsCartOpen] = useState(false);
+
+
+    const navigate = useNavigate();
+
+    const handleHeader = (e) => {
+        e.preventDefault();
+        // Aqui poderia incluir lógica de cadastro real
+        navigate('/minhaconta'); // ou outra página
+    };
+
+    const toggleCart = () => {
+        setIsCartOpen(!isCartOpen);
+    };
+
+
     return (
         <div id="header-wrapper">
             <header id='header'>
@@ -30,12 +50,29 @@ const Header = () => {
                     <Button 
                         label="Entrar" 
                         id='button-header'
+                        onClick={handleHeader}
                     />
-                    <img src={miniCart} alt="" id='mini-cart'/>
+                     <div className="cart-wrapper">
+                        <img
+                            src={miniCart}
+                            alt="Carrinho"
+                            id="mini-cart"
+                            onClick={toggleCart}
+                        />
+                        {isCartOpen && (
+                            <div className="mini-cart-dropdown">
+                                <p className='block font-bold text-sm'>Meu Carrinho</p>
+                                <hr id='linhaCart'/>
+                                <img style={{height: '100px'}} src={mainHome} alt="" />
+                            </div>
+                        )}
+                    </div>
+                   
                 </div>
+                
             </header>
 
-            <nav id="nav-links">
+             <nav id="nav-links">
                 <ul>
                     <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
@@ -59,7 +96,9 @@ const Header = () => {
                     </li> 
                 </ul> 
             </nav> 
+
         </div>
+        
     );
 }
  

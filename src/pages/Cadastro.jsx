@@ -5,8 +5,46 @@ import imagemCadastro1 from '../assets/imagemCadastro1.png'
 import imagemCadastro2 from '../assets/imagemCadastro2.png'
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
+import gmail from '../assets/gmail.png'
+import facebook from '../assets/facebook.png'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const Cadastro = () => {
+
+    const [email, setEmail] = useState('');
+    const [errors, setErrors] = useState({ email: ''});
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    let valid = true;
+    const newErrors = { email: ''};
+
+    if (!email) {
+      newErrors.email = 'Email é obrigatório.';
+      valid = false;
+    } else if (email.length < 12) {
+      newErrors.email = 'Email deve ter pelo menos 12 caracteres.';
+      valid = false;
+    }
+
+      setErrors(newErrors);
+
+    if (valid) {
+      
+            navigate('/registro'); // ou outra página
+        
+        }
+    }
+
+    
+    
+    
+
+    
 
     return (
         <div>
@@ -15,28 +53,42 @@ const Cadastro = () => {
            </div>
          <main id='mainCadastro'>
             <div className='flex align-items-center justify-content-center'>
-                <form id='formCadastro' className='px-3'>
-                <h3 className='text-4xl pl-5 pt-5'>Crie sua conta</h3>
-                <p className='pl-5 pt-3'>
-                    Já possui uma conta? Entre <a href="">aqui</a>
+                <form id='formCadastro' className='px-5' onSubmit={handleSubmit}>
+                <h3 className='text-4xl pt-5'>Crie sua conta</h3>
+                <p className=' pt-3'>
+                    Já possui uma conta? Entre <Link to="/login">aqui</Link>
                 </p>
-                <label className='block font-bold text-sm pl-5 pt-3' htmlFor="email">Email</label>
-                <div id='inputAltura' className='px-5 pt-3'>
+                <label className='block font-bold text-sm  pt-3' htmlFor="email">Email</label>
+                <div id='inputAltura' className=' pt-3'>
                     <InputText
-                    type='text'
-                    placeholder='Insira seu email'
-                    className='w-full'
-                    id='email'
-                    style={{ height: '48px', fontSize: '16px', padding: '10px 12px', backgroundColor: '#F5F5F5' }}
+                        type='text'
+                        placeholder='Insira seu email'
+                        className='w-full'
+                        id='email'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        style={{ height: '48px', fontSize: '16px', padding: '10px 12px', backgroundColor: '#F5F5F5' }}
+                        required
                     />
+                    {errors.email && <small style={{ color: 'red' }}>{errors.email}</small>}
                 </div>
-                <Button 
-                     label="Entrar" 
-                     type='Submit'
+                <div className='pt-3 flex justify-content-center border-round-md'>
+                    <Button 
+                     label="Criar conta" 
+                     type='submit'
                      className='w-full'
-                     style={{ height: '48px', fontSize: '16px', padding: '10px 12px', backgroundColor: '#C92071'}}
-
+                     style={{ height: '43px', fontSize: '16px'}}
+                     id="button-cadastro"
+                     
                   />
+                </div>
+                <div id='login-com' className='flex pt-6 px-8 gap-5'>
+                    <p className='text-center'>Ou faça login com</p>
+                    <div id="icones-gmail-face">
+                        <img id='gmail' src={gmail} alt="" />
+                        <img id='facebook' src={facebook} alt="" />
+                    </div>
+                </div>
                 </form>
             </div>
 

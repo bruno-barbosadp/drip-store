@@ -5,6 +5,8 @@ import Produtos from "../pages/Produtos";
 import Categorias from "../pages/Categorias";
 import MeusPedidos from "../pages/MeusPedidos";
 import Cadastro from "../pages/Cadastro";
+import Login from "../pages/Login";
+import Registro from "../pages/Registro";
 
 const Paths = () => {
     return (
@@ -19,6 +21,8 @@ const Paths = () => {
                                      
                 </Route>
                 <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/registro" element={<Registro/>} />
                 </Routes>
            </BrowserRouter>
         </>

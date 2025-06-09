@@ -1,0 +1,43 @@
+#headerLogin{
+    background-color: #FFFFFF;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+#logoLogin{
+    width: 172.5px;
+    height: 30px;
+}
+
+#mainLogin{
+    background: linear-gradient(to bottom, #B5B6F2, #fff);
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+#formLogin{
+    background-color: #FFFFFF;
+    height: 520px;
+    width: 510px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Impede de encolher */
+}
+
+#button-login{
+    background-color: #C92071;
+}
+
+#button-login:hover{
+    background-color: #b1105e;
+}

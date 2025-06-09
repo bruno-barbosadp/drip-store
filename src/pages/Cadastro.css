@@ -57,3 +57,91 @@
    margin-top: 160px;
    margin-left: -90px;
 }
+
+#button-cadastro{
+  background-color: #C92071;
+}
+
+#button-cadastro:hover{
+  background-color: #b1105e;
+}
+
+#icones-gmail-face{
+  display: flex;
+  gap: 24px;
+}
+
+#gmail{
+  height: 30px;
+  margin-top: -7px;
+}
+
+#facebook{
+  height: 30px;
+  margin-top: -7px;
+}
+
+#login-com{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #headerCadastro {
+        padding-left: 20px;
+        justify-content: center;
+    }
+
+    #mainCadastro {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    #formCadastro {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        justify-content: center;
+    }
+
+    #formCadastro h3,
+    #formCadastro p{
+        text-align: center;
+        width: 100%;
+    }
+
+    #inputAltura,
+    #formCadastro .p-inputtext {
+        width: 100%;
+    }
+
+    #posicaoImagem,
+    #imagemCadastro1,
+    #imagemCadastro2 {
+        display: none;
+    }
+
+    .flex.pt-6.px-8.gap-5 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    #icones-gmail-face{
+      display: flex;
+      gap: 30px;
+    }
+
+    #gmail,
+    #facebook {
+        height: 40px;
+        padding-bottom: 12px;
+    }
+}
