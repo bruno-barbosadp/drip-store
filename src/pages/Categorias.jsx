@@ -1,7 +1,7 @@
 const Categorias = () => {
     return (
         <>
-           
+           djfkejk
         </>
     );
 }

@@ -1,0 +1,37 @@
+.collection-images {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.image-card {
+  position: relative;
+  display: inline-block;
+}
+
+.image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.buy-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  bottom: 20px;
+  background-color: white;
+  color: #C92071;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+  height: 44px;
+  width: 108px;
+}
+
+.buy-btn:hover {
+  background-color:rgba(255, 255, 255, 0.8);
+}

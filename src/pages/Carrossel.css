@@ -1,0 +1,126 @@
+.primary-button{
+    background-color: #C92071;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    height: 50px;
+}
+
+.primary-button:hover{
+    background-color: #a31057;
+    transform: translateY(-1px)
+}
+
+.carousel-dots{
+    display: flex;
+    gap: 12px;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: grey;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    margin-top: 24px;
+}
+
+.dot:hover{
+    background-color: #C92071;
+}
+
+.dot.active{
+    background-color: #C92071;
+}
+
+.carousel-section{
+    background-color: #F5F5F5;
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.carousel-container{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper{
+    position: relative;
+    height: 440px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slide-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-right: 40px;
+}
+
+.slide-image img{
+    max-height: 650px;
+    transform: rotate(-22deg);
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-color: #F5F5F5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carousel-slide.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.slide-content{
+    width: 50%;
+    padding-right: 40px;
+}
+
+.slide-content p{
+    max-width: 100%;
+    margin-bottom: 30px;
+    line-height: 30px;
+    color: #474747;
+}
+
+.slide-content h1{
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+.slide-content h4{
+    color: #F6AA1C;
+    margin-bottom: 20px;
+}
+
+.carousel-controls{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

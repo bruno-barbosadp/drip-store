@@ -11,10 +11,8 @@ import { useNavigate } from 'react-router-dom';
 import mainHome from '../assets/main-home.png'
 
 const Header = () => {  
-
     
     const [isCartOpen, setIsCartOpen] = useState(false);
-
 
     const navigate = useNavigate();
 
@@ -28,9 +26,8 @@ const Header = () => {
         setIsCartOpen(!isCartOpen);
     };
 
-
     return (
-        <div id="header-wrapper">
+        <div id="header-wrapper" className='col-12 md:col-3'>
             <header id='header'>
                 <div id="header-center">
                     <img src={logoHeader} alt="Logo Header" id="logo-header" />
@@ -63,7 +60,9 @@ const Header = () => {
                             <div className="mini-cart-dropdown">
                                 <p className='block font-bold text-sm'>Meu Carrinho</p>
                                 <hr id='linhaCart'/>
-                                <img style={{height: '100px'}} src={mainHome} alt="" />
+                                
+                                    <img style={{height: '100px'}} src={mainHome} alt="" />
+                               
                             </div>
                         )}
                     </div>

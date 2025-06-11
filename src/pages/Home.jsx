@@ -1,13 +1,20 @@
 import './Home.css'
 import mainHome from '../assets/main-home.png'
+import Carrossel from './Carrossel';
+import Collection from './Collection';
+
+
 
 const Home = () => {
+    
     return (
-        <div id='page-home'>
-           <div id="slide-home">
-              <img style={{width: '400px'}} src={mainHome} alt="" />
-           </div>
-        </div>
+        
+        <>
+            <Carrossel/>
+            <Collection/>
+        </>
+        
+        
     );
 }
 
