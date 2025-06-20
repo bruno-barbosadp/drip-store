@@ -19,8 +19,22 @@
   </head>
     <body>
     
+    
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const buttons = document.querySelectorAll('.btn-category');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove a classe ativa de todos os botões
+          buttons.forEach(b => b.classList.remove('active'));
+
+          // Adiciona a classe ativa somente ao botão clicado
+          button.classList.add('active');
+        });
+      });
+    </script>
   </body>
 </html>

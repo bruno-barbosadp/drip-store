@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import mainHome from "../assets/main-home.png"
+import ornamentSlide from "../assets/ornament-slide.png"
 import "./Carrossel.css"
 
 const slides = [

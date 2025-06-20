@@ -1,0 +1,24 @@
+.container-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #c92071;
+    flex-direction: column;
+}
+
+.btn-category{
+    background-color: #C92071;
+    color: #ffffff;
+    width: 180px;
+    height: 38px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    transition: 1s;
+    margin-top: 18px;
+}
+
+.btn-category:hover{
+    background-color: #a82062;
+}

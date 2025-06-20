@@ -13,25 +13,177 @@
   display: block;
   width: 100%;
   height: auto;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .buy-btn {
   position: absolute;
   bottom: 10px;
   left: 20px;
-  bottom: 20px;
+  bottom: 40px;
   background-color: white;
   color: #C92071;
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
   z-index: 1;
   transition: background-color 0.3s;
   height: 44px;
-  width: 108px;
+  width: 142px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .buy-btn:hover {
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color:rgba(236, 231, 231, 0.8);
 }
+
+#collection-container h4{
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    font-size: 26px;
+    color: #474747;
+}
+
+#collection-container{
+  width: 100vw;
+  height: auto;
+  background-color: rgb(247, 252, 253);
+  padding-top: 60px;
+}
+
+.title-collection-container2{
+  padding-right: 54px;
+  padding-top: 84px;
+}
+
+#btn-1{
+  border-radius: 50%;
+  height: 100px;
+  width: 102px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+#btn-1 img{
+  width: 60px;
+  height: auto;
+  color: #474747;
+}
+
+button:hover img{
+  color: #cc1f59;
+  filter: brightness(0) saturate(100%) invert(36%) sepia(83%) saturate(800%) hue-rotate(290deg) brightness(103%) contrast(101%);
+  transition: filter 0.3s ease;
+}
+
+#btn-2{
+    border-radius: 50%;
+    height: 100px;
+    width: 102px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#btn-2 img{
+    width: 60px;
+    height: auto;
+    color: #474747;
+}
+
+#btn-3{
+    border-radius: 50%;
+    height: 100px;
+    width: 102px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#btn-3 img{
+    width: 60px;
+    height: auto;
+    color: #474747;
+}
+
+#btn-4{
+    border-radius: 50%;
+    height: 100px;
+    width: 102px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#btn-4 img{
+    width: 60px;
+    height: auto;
+    color: #474747;
+}
+
+#btn-5{
+    border-radius: 50%;
+    height: 100px;
+    width: 102px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#btn-5 img{
+    width: 60px;
+    height: auto;
+    color: #474747;
+}
+
+#btn-label{
+  color: #000000;
+  font-weight: 700;
+}
+
+#collection-items{
+  display: flex;
+  justify-content: center;
+  gap: 46px;
+}
+
+.desconto-btn{
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    bottom: 20px;
+    background-color:#E7FF86;
+    color: #1C1C1C;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+    height: 28px;
+    width: 82px;
+}
+
+#collection-container2{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #474747;
+  font-weight: 500;
+}
+

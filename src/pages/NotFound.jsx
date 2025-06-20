@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import "./Categorias.css"
 
-const Categorias = () => {
+const NotFound = () => {
 
     const navigate = useNavigate();
 
@@ -9,7 +8,7 @@ const Categorias = () => {
         e.preventDefault();
         // Aqui poderia incluir lógica de cadastro real
         navigate('/'); // ou outra página
-    };
+    }
 
     return (
         <div className="container-category">
@@ -19,4 +18,4 @@ const Categorias = () => {
     );
 }
  
-export default Categorias;
+export default NotFound;

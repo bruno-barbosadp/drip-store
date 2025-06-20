@@ -1,0 +1,64 @@
+#container-ofertahome {
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+}
+
+#esfera-oferta {
+  background: linear-gradient(to bottom, #b7a8df, #fff);
+  border-radius: 50%;
+  height: 450px;
+  width: 450px;
+  margin-top: 120px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#esfera-oferta img {
+  width: 550px;  /* maior que a esfera */
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+#paragraph-title{
+    color: #C92071;
+    font-weight: 700;
+}
+
+#container-descripition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+#title-oferta-product{
+    color: #474747;
+    font-size: 50px;
+}
+
+#text-lorem{
+    line-height: 26px;
+    color: #474747;
+}
+
+#container-descripition button{
+    background-color: #C92071;
+    color: #ffffff;
+    width: 180px;
+    height: 38px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    transition: 1.5s;
+}
+
+#container-descripition button:hover{
+    background-color: #a82062;
+}
