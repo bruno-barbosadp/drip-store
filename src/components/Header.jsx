@@ -104,7 +104,7 @@ const handleKeyDown = (e) => {
                                         
                                     </div>
                                     <div id='descripition-cart'>
-                                         <h5 style={{fontSize: '16px'}}><b>Tênis Nike Revolution <br /> 6 Next Nature <br /> Masculino </b> </h5>
+                                         <h5 style={{fontSize: '16px', marginRight: '76px'}}><b>K-Swiss V8<br /> Masculino </b> </h5>
                                          
                                     </div>
                                     

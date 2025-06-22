@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import mainHome from "../assets/main-home.png"
 import ornamentSlide from "../assets/ornament-slide.png"
 import "./Carrossel.css"
+import { useNavigate } from "react-router-dom"
 
 const slides = [
     {
@@ -65,6 +66,15 @@ function Carrossel(){
         clearInterval(intervalRef.current)
     }
 
+    const navigate = useNavigate();
+
+    const handleProductsDetails = (e) => {
+        e.preventDefault();
+        // Aqui poderia incluir lógica de cadastro real
+        navigate('/produtos'); // ou outra página
+    };
+
+
     return (
     <section className="carousel-section">
         <div 
@@ -83,7 +93,7 @@ function Carrossel(){
                             <h4>{slide.text}</h4>
                             <h1>{slide.title}</h1>
                             <p>{slide.description}</p>
-                            <button className="primary-button">{slide.buttonText}</button>
+                            <button onClick={handleProductsDetails} className="primary-button">{slide.buttonText}</button>
                         </div>
                         <div className="slide-image">
                             <img src={slide.image} alt={slide.title} />
